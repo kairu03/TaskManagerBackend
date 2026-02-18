@@ -57,6 +57,9 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // to sanitize all incoming requests
 app.use(mongoSanitize({ replaceWith: '_' })); // sanitized req.body, req.query, req.params
 
+// Enable trusting proxy headers for proper IP tracking (required for rate limiting)
+app.set('trust proxy', 1);
+
 // 🌍 Global limiter (applies to all routes below)
 app.use(globalLimiter);
 
