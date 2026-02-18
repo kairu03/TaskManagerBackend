@@ -33,6 +33,7 @@ This project demonstrates secure backend architecture including JWT authenticati
 
 ## 📂 Project Structure
 
+```text
 task-manager-backend/
 ├── node_modules/
 ├── src/
@@ -71,6 +72,7 @@ task-manager-backend/
   "success": false,
   "message": "Error message here"
 }
+
 
 --- 
 
