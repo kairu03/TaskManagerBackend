@@ -44,8 +44,10 @@ task-manager-backend/
 │   ├── utils/
 │   └── server.js
 ├── .env
+├── .gitignore
+├── package-lock.json
 ├── package.json
-└── package-lock.json
+└── README.md
 ```
 
 ---
