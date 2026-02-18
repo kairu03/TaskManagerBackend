@@ -60,7 +60,7 @@ app.use(mongoSanitize({ replaceWith: '_' })); // sanitized req.body, req.query, 
 // Enable trusting proxy headers for proper IP tracking (required for rate limiting)
 app.set('trust proxy', 1);
 
-// 🌍 Global limiter (applies to all routes below)
+// Global limiter (applies to all routes below)
 app.use(globalLimiter);
 
 // tester for route
@@ -69,7 +69,7 @@ app.get('/', (req, res) => {
 });
 
 // API route prefixes
-// 🚨 Apply stricter limiter ONLY to auth routes
+// Apply stricter limiter ONLY to auth routes
 app.use('/api/auth', authLimiter, authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/tasks', taskRoutes);
