@@ -30,7 +30,7 @@ const router = express.Router();
  *             properties:
  *               name:
  *                 type: string
- *                 example: Khyle Francisco
+ *                 example: Khyle
  *               email:
  *                 type: string
  *                 example: khyle@email.com
