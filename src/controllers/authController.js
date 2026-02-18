@@ -56,7 +56,7 @@ export const userLogin = asyncHandler(async (req, res) => {
 
   // check if user already exists
   const user = await User.findOne({ email });
-  if (!user?.trim()) {
+  if (!user) {
     throw new ApiError('Invalid input', 400);
   }
 

@@ -14,6 +14,7 @@ export const getTasks = asyncHandler(async (req, res) => {
   // send the requested task to frontend as json w/ status 200
   return res.status(200).json({
     success: true,
+    message: 'Task fetched successfully',
     count: tasks.length,
     data: tasks, // [] if no tasks
   });
@@ -43,6 +44,7 @@ export const createTask = asyncHandler(async (req, res) => {
   // send the saved new task to frontend as json w/ status 200
   return res.status(201).json({
     success: true,
+    message: 'Task created successfully',
     data: savedTask,
   });
 });
@@ -92,6 +94,7 @@ export const updateTask = asyncHandler(async (req, res) => {
   // send the updated task to frontend as json w/ status 200
   return res.status(200).json({
     success: true,
+    message: 'Task updated successfully',
     data: updatedTask,
   });
 });
@@ -124,6 +127,7 @@ export const deleteTask = asyncHandler(async (req, res) => {
   // send the deleted task to frontend as json w/ status 200
   return res.status(200).json({
     success: true,
+    message: 'Task deleted successfully',
     data: deletedTask,
   });
 });
