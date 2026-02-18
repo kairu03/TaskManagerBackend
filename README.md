@@ -33,8 +33,7 @@ This project demonstrates secure backend architecture including JWT authenticati
 
 ## 📂 Project Structure
 
-```text
-task-manager-backend/
+- task-manager-backend/
 ├── node_modules/
 ├── src/
 │   ├── config/
@@ -46,6 +45,7 @@ task-manager-backend/
 ├── .env
 ├── package.json
 └── package-lock.json
+
 
 ---
 
@@ -67,12 +67,11 @@ task-manager-backend/
 - Global error middleware
 - Consistent error response format:
 
-```json
-{
+
+- {
   "success": false,
   "message": "Error message here"
 }
-
 
 --- 
 
@@ -86,10 +85,8 @@ task-manager-backend/
 
 ## 🔧 Installation & Setup
 
-```markdown
 1. Clone the repository
 
-```bash
 - git clone <your-repo-url>
 - cd task-manager-api
 
@@ -111,7 +108,7 @@ task-manager-backend/
 
 Server runs at:
 
-http://localhost:5000
+- http://localhost:5000
 
 ---
 
