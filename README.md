@@ -33,7 +33,8 @@ This project demonstrates secure backend architecture including JWT authenticati
 
 ## 📂 Project Structure
 
-- task-manager-backend/
+```plaintext
+task-manager-backend/
 ├── node_modules/
 ├── src/
 │   ├── config/
@@ -45,7 +46,7 @@ This project demonstrates secure backend architecture including JWT authenticati
 ├── .env
 ├── package.json
 └── package-lock.json
-
+```
 
 ---
 
@@ -67,12 +68,12 @@ This project demonstrates secure backend architecture including JWT authenticati
 - Global error middleware
 - Consistent error response format:
 
-
-- {
+```json
+{
   "success": false,
   "message": "Error message here"
 }
-
+```
 --- 
 
 ## 📄 Swagger Documentation
@@ -112,8 +113,8 @@ Server runs at:
 
 ---
 
-### 👨‍💻 Author
-
-Khylemikel Francisco
+### 👨‍💻 Author<br>
+Khylemikel Francisco<br>
 Aspiring Full-Stack Developer specializing in Backend
+
 
