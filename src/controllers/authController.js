@@ -55,7 +55,7 @@ export const userLogin = asyncHandler(async (req, res) => {
 
   // console.log("JWT Secret:", process.env.JWT_SECRET);
 
-  // check if user already exists
+  // check if user exists
   const user = await User.findOne({ email });
   if (!user) {
     throw new ApiError('Invalid input', 400);

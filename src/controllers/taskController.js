@@ -27,7 +27,7 @@ export const createTask = asyncHandler(async (req, res) => {
   // get title, description from request body
   const { title, description } = req.body;
   if (!title?.trim()) {
-    throw new ApiError('Title is requried', 400);
+    throw new ApiError('Title is required', 400);
   }
 
   // create new task objecy (not saved yet)
