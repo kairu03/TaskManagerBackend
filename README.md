@@ -65,7 +65,7 @@ task-manager-backend/
 1. User registers with name, email, and password.
 2. Password is securely hashed using bcrypt before being stored in the database.
 3. Upon successful login, the server generates a signed JWT.  
-4. The client includes the token in the request header: Authorization: Bearer <token>
+4. The client includes the token in the request header: Authorization: `Bearer <token>`
 5. Authentication middleware verifies the token signature and:
   - Extracts the user ID from the payload
   - Validates the user exists
