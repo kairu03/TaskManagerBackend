@@ -65,7 +65,8 @@ task-manager-backend/
 1. User registers with name, email, and password.
 2. Password is securely hashed using bcrypt before being stored in the database.
 3. Upon successful login, the server generates a signed JWT.  
-4. The client includes the token in the request header: Authorization: Bearer <token>
+4. The client includes the token in the request header: 
+  - Authorization: Bearer <token>
 5. Authentication middleware verifies the token signature and:
   - Extracts the user ID from the payload
   - Validates the user exists
@@ -76,25 +77,25 @@ task-manager-backend/
 
 ## 🔐 Security Considerations
 
-- Password Hashing
+- **Password Hashing**: 
 User passwords are hashed using bcrypt before being stored in the database to prevent exposure in case of data breaches.
 
-- JWT Authentication
+- **JWT Authentication**: 
 Tokens are signed using a secret key stored in environment variables and verified on each protected request.
 
-- Environment Variables
+- **Environment Variables**: 
 Sensitive data such as JWT secrets and database URIs are stored in .env files and excluded from version control.
 
-- Authorization & Ownership Checks
+- **Authorization & Ownership Checks**: 
 Protected routes ensure users can only access and modify their own resources.
 
-- Centralized Error Handling
+- **Centralized Error Handling**: 
 Error responses are standardized to prevent leaking sensitive internal details.
 
-- Request Validation Middleware
+- **Request Validation Middleware**: 
 Incoming requests are validated to prevent malformed or malicious data from entering the system.
 
-- Test Environment Isolation
+- **Test Environment Isolation**: 
 Automated tests run against a separate test database to avoid contaminating production data.
 
 ---
@@ -138,6 +139,7 @@ Automated tests run against a separate test database to avoid contaminating prod
   "message": "Error message here"
 }
 ```
+
 --- 
 
 ## 🔧 Installation & Setup
