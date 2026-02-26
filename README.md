@@ -60,6 +60,45 @@ task-manager-backend/
 
 ---
 
+## 🔑 Authentication Flow
+
+1. User registers with name, email, and password.
+2. Password is securely hashed using bcrypt before being stored in the database.
+3. Upon successful login, the server generates a signed JWT.  
+4. The client includes the token in the request header: Authorization: Bearer <token>
+5. Authentication middleware verifies the token signature and:
+  - Extracts the user ID from the payload
+  - Validates the user exists
+  - Attaches the user object to req.user
+6. Protected routes enforce ownership checks to ensure users can only access their own resources.
+
+---
+
+## 🔐 Security Considerations
+
+- Password Hashing
+User passwords are hashed using bcrypt before being stored in the database to prevent exposure in case of data breaches.
+
+- JWT Authentication
+Tokens are signed using a secret key stored in environment variables and verified on each protected request.
+
+- Environment Variables
+Sensitive data such as JWT secrets and database URIs are stored in .env files and excluded from version control.
+
+- Authorization & Ownership Checks
+Protected routes ensure users can only access and modify their own resources.
+
+- Centralized Error Handling
+Error responses are standardized to prevent leaking sensitive internal details.
+
+- Request Validation Middleware
+Incoming requests are validated to prevent malformed or malicious data from entering the system.
+
+- Test Environment Isolation
+Automated tests run against a separate test database to avoid contaminating production data.
+
+---
+
 ## ✨ Features
 
 - 🔐 JWT-based Authentication (Register & Login)
@@ -83,17 +122,6 @@ task-manager-backend/
 - After running locally:
 
  http://localhost:5000/api-docs
-
----
-
-## 🔑 Authentication Flow
-
-1. User registers with email & password.
-2. Password is hashed before saving to the database.
-3. User logs in and receives a JWT token.
-4. Token must be included in request headers:
-  Authorization: Bearer <your_token>
-5. Protected routes verify the token and attach the user to `req.user`.
 
 ---
 
@@ -135,7 +163,7 @@ task-manager-backend/
 
 - npm run dev
 
-Server runs at:
+5. Access the server
 
 - http://localhost:5000
 
