@@ -1,6 +1,6 @@
 import express from 'express';
 import { userRegister, userLogin } from '../controllers/authController.js';
-import { validateLogin, validateRegister } from '../middleware/validateUser.js';
+import { validateLogin, validateRegister } from '../middlewares/validateUser.js';
 
 /**
  * @swagger

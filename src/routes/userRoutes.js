@@ -1,5 +1,5 @@
 import express from 'express';
-import { protectRoute } from '../middleware/authMiddleware.js';
+import { protectRoute } from '../middlewares/authMiddleware.js';
 import { getUserProfile, updateUserProfile, deleteUserProfile } from '../controllers/userController.js';
 
 /**

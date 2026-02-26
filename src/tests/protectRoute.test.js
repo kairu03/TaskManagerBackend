@@ -5,7 +5,10 @@ import User from "../models/user";
 import jwt from 'jsonwebtoken';
 import bcrypt from "bcryptjs";
 import express from "express";
-import { protectRoute } from "../middleware/authMiddleware.js";
+import { protectRoute } from "../middlewares/authMiddleware.js";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const testApp = express();
 testApp.use(express.json());

@@ -1,7 +1,7 @@
 import express from 'express';
-import { protectRoute } from '../middleware/authMiddleware.js';
+import { protectRoute } from '../middlewares/authMiddleware.js';
 import { createTask, deleteTask, getTasks, updateTask } from '../controllers/taskController.js';
-import { validateCreateTask, validateUpdateTask } from '../middleware/validateTask.js';
+import { validateCreateTask, validateUpdateTask } from '../middlewares/validateTask.js';
 
 /**
  * @swagger

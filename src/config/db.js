@@ -10,6 +10,13 @@ export const connectDB = async () => {
     logger.info('MongoDB Connected Successfully');
   } catch (error) {
     logger.error('Error connecting to MongoDB', error);
-    process.exit(1);
+
+    // only exit in non test environment
+    if (process.env.NODE_ENV !== 'test') {
+      process.exit(1);
+    } else {
+      throw error; // let jest catch it
+    }
+    
   }
 }

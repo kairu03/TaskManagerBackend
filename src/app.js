@@ -9,7 +9,7 @@ import morgan from "morgan";
 import swaggerUi from 'swagger-ui-express'
 import dotenv from "dotenv";
 
-import { errorHandler } from "./middleware/errorHandler.js";
+import { errorHandler } from "./middlewares/errorHandler.js";
 import { ApiError } from "./utils/apiError.js";
 import { authLimiter, globalLimiter } from "./config/rateLimiter.js";
 import { corsOptions } from "./config/cors.js";

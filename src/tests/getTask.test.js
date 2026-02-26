@@ -58,18 +58,7 @@ describe('GET /api/tasks/', () => {
     expect(res.body.data[0]).toHaveProperty('title')
   })
 
-  it('should return an empty array if user have no tasks', async () => {
-    const res = await request(app)
-    .get('/api/tasks')
-    .set('Authorization', `Bearer ${token}`)
-
-    expect(res.statusCode).toBe(200)
-    expect(res.body.success).toBe(true)
-    expect(res.body.count).toBe(0)
-    expect(res.body.data).toEqual([]);
-  })
-
-  it('should return empty array if user has no tasks', async () => {
+  it('should return an empty array if user has no tasks', async () => {
 
     const res = await request(app)
       .get('/api/tasks')

@@ -1,8 +1,20 @@
 # 📌 Task Manager API
 
-A production-ready RESTful Task Manager API built with **Node.js, Express, MongoDB, and JWT authentication**.
+[![Run Tests](https://github.com/kairu03/TaskManagerBackend/actions/workflows/test.yml/badge.svg?branch=main&event=push)](https://github.com/kairu03/TaskManagerBackend/actions/workflows/test.yml)
 
-This project demonstrates secure backend architecture including JWT authentication, authorization, validation, centralized error handling, and structured middleware layering.
+A production-ready RESTful Task Manager API built with **Node.js, Express, MongoDB, and JWT authentication**, designed with scalability, security, automated testing, and CI/CD integration in mind.
+
+This project demonstrates real-world backend engineering practices including authentication & authorization, modular architecture, centralized error handling, automated testing, and continuous integration/deployment.
+
+---
+
+## 🌐 Live Demo
+
+- Base API URL:
+https://task-manager-api-backend.onrender.com
+
+- Swagger Documentation:
+https://task-manager-api-backend.onrender.com/api-docs
 
 ---
 
@@ -13,21 +25,10 @@ This project demonstrates secure backend architecture including JWT authenticati
 - MongoDB
 - Mongoose
 - JSON Web Token (JWT)
+- Jest & Supertest
+- Github Actions (CI)
+- Render (Deployment)
 - Swagger
-
----
-
-## ✨ Features
-
-- 🔐 JWT-based Authentication (Register & Login)
-- 🛡 Protected Routes with User Ownership Checks
-- 📦 Full CRUD Operations for Tasks
-- 🔒 Password hashing using bcrypt
-- ✅ Request Validation Middleware
-- ⚠ Centralized Global Error Handling
-- 🔄 Async Error Handling Wrapper
-- 📄 Swagger API Documentation
-- 🧪 Tested and validated API endpoints using Swagger UI and Postman.
 
 ---
 
@@ -35,20 +36,53 @@ This project demonstrates secure backend architecture including JWT authenticati
 
 ```plaintext
 task-manager-backend/
+├── .github/
+│   └── workflows/
+│       └── test.yml
 ├── node_modules/
 ├── src/
 │   ├── config/
 │   ├── controllers/
 │   ├── middlewares/
 │   ├── models/
+│   ├── routes/
+│   ├── tests/
 │   ├── utils/
+│   ├── app.js
 │   └── server.js
+├── .babelrc
 ├── .env
 ├── .gitignore
 ├── package-lock.json
 ├── package.json
 └── README.md
 ```
+
+---
+
+## ✨ Features
+
+- 🔐 JWT-based Authentication (Register & Login)
+- 🛡 Protected Routes with User Ownership Authorization
+- 📦 Full CRUD Operations for Task Management
+- 🔒 Secure Password Hashing using bcrypt
+- ✅ Request Validation Middleware for Data Integrity
+- ⚠ Centralized Global Error Handling with Async Wrapper
+- 🧪 Automated Integration Testing using Jest & Supertest
+- 🗄 Isolated Test Database Configuration (Environment-based)
+- 🔄 Continuous Integration via GitHub Actions (Automated Test Runs on Push)
+- 🚀 Continuous Deployment with Automatic Redeploy on Render
+- 📄 Swagger API Documentation
+- 🔎 API Testing & Validation using Swagger UI and Postman
+- 🛡 Security Best Practices (Rate Limiting, HTTP Security Headers, Environment Variables)
+
+---
+
+## 💻 Local Development
+
+- After running locally:
+
+ http://localhost:5000/api-docs
 
 ---
 
@@ -77,14 +111,6 @@ task-manager-backend/
 }
 ```
 --- 
-
-## 📄 Swagger Documentation
-
-- Interactive API documentation available at:
-
-/api-docs
-
----
 
 ## 🔧 Installation & Setup
 
