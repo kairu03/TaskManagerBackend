@@ -24,3 +24,4 @@ yarn-error.log*
 .env
 
 src/tests/sample.test.js
+prac.js
