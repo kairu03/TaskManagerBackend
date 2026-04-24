@@ -36,26 +36,23 @@ https://task-manager-api-backend.onrender.com/api-docs
 
 ```plaintext
 task-manager-backend/
-├── .github/
-│   └── workflows/
-│       └── test.yml
-├── node_modules/
-├── src/
-│   ├── config/
-│   ├── controllers/
-│   ├── middlewares/
-│   ├── models/
-│   ├── routes/
-│   ├── tests/
-│   ├── utils/
-│   ├── app.js
-│   └── server.js
-├── .babelrc
-├── .env
-├── .gitignore
-├── package-lock.json
-├── package.json
-└── README.md
+├── 📁 .github
+│   └── 📁 workflows
+│       └── ⚙️ test.yml
+├── 📁 src
+│   ├── 📁 config
+│   ├── 📁 controllers
+│   ├── 📁 middlewares
+│   ├── 📁 models
+│   ├── 📁 routes
+│   ├── 📁 tests
+│   ├── 📁 utils
+│   ├── 📄 app.js
+│   └── 📄 server.js
+├── ⚙️ .gitignore
+├── 📝 README.md
+├── ⚙️ package-lock.json
+└── ⚙️ package.json
 ```
 
 ---
@@ -101,7 +98,7 @@ Automated tests run against a separate test database to avoid contaminating prod
 
 ## ✨ Features
 
-- 🔐 JWT-based Authentication (Register & Login)
+- 🔐 JWT-based Authentication (Register, Login, Protected Routes)
 - 🛡 Protected Routes with User Ownership Authorization
 - 📦 Full CRUD Operations for Task Management
 - 🔒 Secure Password Hashing using bcrypt
@@ -145,7 +142,7 @@ Automated tests run against a separate test database to avoid contaminating prod
 
 1. Clone the repository
 
-- git clone <your-repo-url>
+- git clone https://github.com/kairu03/task-manager-api.git
 - cd task-manager-api
 
 2. Install dependencies
@@ -164,7 +161,7 @@ Automated tests run against a separate test database to avoid contaminating prod
 
 - npm run dev
 
-5. Access the server
+5. Access the API
 
 - http://localhost:5000
 
